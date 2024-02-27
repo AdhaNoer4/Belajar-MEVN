@@ -1,0 +1,29 @@
+Hubungan Web Dengan Internet
+
+Internet
+- Jaringan Global
+  tercipta karena banyaknya perangkat komputer yang salin terhubung.
+- Media Transportasi
+  untuk berbagi data dan informasi
+- TCP / IP
+  Protokol yang digunakan oleh internet
+
+Web Development
+- Sebuah sisetm.
+  aplikasi yang memanfaatkan internet
+- sumber Informasi
+  sebagi wadah untuk melampirkan data
+- HTTP
+  Hypertext Transfer Protocol/ Protocol yang digunakan oleh web
+
+Yang Dilakukan Oleh HTTP
+ http terdiri dari client dan server
+- client adalah perangkat yang digunakan / user yang meminta / mengirimkan data.
+- server adalah media tempat menyimpan data yang dibutuhkan.
+
+client meminta/ mengirimkan data ke server yang di sebut dengan HTTP Request.
+lalu server merespon dengan memberikan data yang kita/ client minta yang di sebut dengan HTTP Response.
+
+protocol HTTP Request Dan HTTP Response Terjadi didalam protocol TCP/IP Internet.
+
+ 
