@@ -1,0 +1,10 @@
+Apa itu internet?
+
+Internet adalah sekumpulan dari perangkat komputer yang saling terhubung melalui TCP/IP yang terhubung ke seluruh dunia
+
+Manfaat internet:
+- untuk berbagi data, video, foto, dll.
+- untuk streaming video
+- untuk e-commerce
+-dll
+.
