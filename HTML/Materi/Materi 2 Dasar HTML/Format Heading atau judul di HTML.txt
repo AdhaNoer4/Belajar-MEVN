@@ -1,0 +1,7 @@
+Heading atau Judul 
+heading dengan Tag <h1> sampai <h6>
+
+heading biasanya digunakan untuk membuat jududl dalam HTML
+heading memiliki 6 level
+level <h1> paling besar
+level <h6> paling kecil.
