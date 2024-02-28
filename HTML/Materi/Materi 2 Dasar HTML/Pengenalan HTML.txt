@@ -1,0 +1,7 @@
+Pengenalan HTML (Hypertext Markup Language)
+html merupakan suatu bahasa markup yang digunakan sebagai format penulisan dokumen untuk di website pada masanya.
+
+HTML di dalam web digunakan sebagai struktur dasar atau kerangka dalam membuat web.
+CSS digunakan sebagai style untuk menghiasi html agar terlihat lebih bagus / enak dilihat
+JS digunakan sebagai mesin/behaviour untuk menggerakan/mengendalikan HTML dan CSS agar terlihat lebih menarik
+
