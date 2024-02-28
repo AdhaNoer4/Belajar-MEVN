@@ -1,0 +1,3 @@
+Format Paragraf di HTML
+Paragraf menggunakan tag <p> 
+tag <p> atau paragraf digunakan untuk membuat sebuah paragraf di dalam HTML
