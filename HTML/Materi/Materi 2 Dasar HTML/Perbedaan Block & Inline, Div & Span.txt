@@ -1,0 +1,19 @@
+Perbedaan Block & Inline Element
+1. Block Element
+    - dalam 1 baris hanya dapat diisi satu Element
+    - ketika membuat element baru akan muncul dibawahnya
+    - margin & padding nya dapat diubah
+
+2. Inline Element
+    - dalam 1 baris dapat diiisi beberapa element
+    - ketika membuat element baru akan muncul di sampinngya
+    - margin & padding nya tidak dapat di ubah
+
+Perbedaan Div & Span:
+1. Div
+    - bersifat Block element
+    - biasanya digunakan untuk mengelompokan beberapa element
+
+2. Span 
+    - bersifat Inline Element.
+    - biasanya digunakan untuk mengelompokan beberapa element di dalam satu baris
