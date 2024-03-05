@@ -1,0 +1,6 @@
+Entity Code 
+adalah sebuah huruf / simbol yang tidak ada di keyboard.
+contoh simbol copyrights.
+macam macam entity code dapat di lihat di web 
+entitycode.com
+dev.w3.org
