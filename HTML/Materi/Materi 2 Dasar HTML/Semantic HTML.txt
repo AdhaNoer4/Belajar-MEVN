@@ -1,0 +1,10 @@
+Semantic HTML
+biasanya digunakan untuk membuat penulisan code program lebih mudah untuk dibaca oleh manusia maupun search engine.
+ contoh Semantic:
+ <main>
+ <nav>
+ <header>
+ <footer>
+ <section>
+ <article>
+ dll
