@@ -1,0 +1,6 @@
+Fungsi hr, br, sub, dan sup
+
+<hr> : berfungsi untuk membuat garis untuk memisahkan element di HTML
+<br> : Berfungsi untuk berpindah baris di HTML.
+<sup>: Untuk membuat Pangkat di atas.
+<sub>: Untuk membuat pangkat dibawah.
