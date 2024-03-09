@@ -1,0 +1,11 @@
+Atribut Name
+digunakan agar informasi yang ada dalam form dapat dikirimkan
+
+method get 
+digunakan untuk mengirimkan data ke dalam url
+biasanya digunakan untuk melakukan pencarian data
+
+method post
+digunakan untuk mengirimkan data tanpa di tampilkan dalam url/ di belakang
+biasanya digunakan untuk mengirimkan data yang bersifat privacy dan penting.
+agar pengiriman data dilakukan di belakang.
