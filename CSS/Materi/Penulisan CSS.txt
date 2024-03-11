@@ -1,0 +1,15 @@
+Penulisan CSS
+
+Selector{
+    property : Value;
+}
+
+contoh:
+
+h1 {
+    font-size: 2rem;
+}
+
+h1 = Selector
+font-size = property
+2rem = value
