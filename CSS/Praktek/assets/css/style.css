@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+  text-decoration: underline overline blue;
+  font-weight: 900;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: -1px;
+}
+
+p a {
+  text-decoration: none;
+  color: red;
+  font-weight: 700;
+}
