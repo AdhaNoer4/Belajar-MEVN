@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+}
+
+#container {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column-reverse; /* mengurutkan berdasarkan kolom dari angka besar ke kecil */
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
