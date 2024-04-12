@@ -8,10 +8,14 @@ h1 {
   margin: 0 auto;
   background-color: aqua;
   display: flex;
-  flex-direction: column-reverse; /* mengurutkan berdasarkan kolom dari angka besar ke kecil */
+  flex-direction: row; /* mengurutkan berdasarkan kolom dari angka besar ke kecil */
+  justify-content: space-evenly; /* Mengatur jarak antar element flex */
 }
 
 div {
   width: 200px;
   height: 200px;
+  text-align: center;
+  line-height: 6em;
+  font-size: 2rem;
 }
