@@ -8,8 +8,9 @@ h1 {
   margin: 0 auto;
   background-color: aqua;
   display: flex;
-  flex-direction: row; /* mengurutkan berdasarkan kolom dari angka besar ke kecil */
+  flex-direction: column; /* mengurutkan berdasarkan kolom dari angka besar ke kecil */
   justify-content: space-evenly; /* Mengatur jarak antar element flex */
+  flex-wrap: wrap; /* mengatur element div/ kotak agar tetap pada ukuran aslinya di dalam container, jika ridak cukub akan pindah kebawahnya */
 }
 
 div {
