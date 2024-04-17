@@ -1,0 +1,47 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+  font-size: 1.5em;
+}
+
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 6em;
+  text-align: center;
+  color: red;
+}
+
+@media screen and (max-width: 500px) and (min-width: 100px) {
+  h1 {
+    color: green;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px) {
+  h1 {
+    color: yellow;
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  h1 {
+    color: violet;
+    font-size: 6em;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  h1 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+}
