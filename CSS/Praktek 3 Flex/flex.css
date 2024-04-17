@@ -9,7 +9,7 @@ h1 {
   background-color: aqua;
   display: flex;
   flex-direction: row; /* mengurutkan berdasarkan kolom dari angka besar ke kecil */
-  /* justify-content: center; Mengatur jarak antar element flex */
+  justify-content: center; /*Mengatur jarak antar element flex*/
   align-items: center; /* Mengatatur ukuran / jarak element secara vertikal */
   flex-wrap: wrap; /*mengatur element div/ kotak agar tetap pada ukuran aslinya di dalam container, jika ridak cukub akan pindah kebawahnya */
   /* align-content: space-between;  untuk membuat jarak antara konten dengan pembungkus*/
@@ -21,14 +21,17 @@ div {
   text-align: center;
   line-height: 6em;
   font-size: 2rem;
-  flex-basis: 300px;
+  /* flex-basis: 300px; */ /* untuk menentukan awal ukuran dari direction flex */
 }
 
-/* div:nth-of-type(1) {
-  align-self: flex-start;
+div:nth-of-type(1) {
+  flex-grow: 1; /* untuk mengisi space dari container pembungkusnya */
+}
+div:nth-of-type(5) {
+  flex-grow: 1;
 }
 
-div:nth-of-type(2) {
+/* div:nth-of-type(2) {
   align-self: flex-end;
 }
 
