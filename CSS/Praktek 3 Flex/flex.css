@@ -4,14 +4,15 @@ h1 {
 
 #container {
   width: 90%;
-  height: 500px;
+  /* height: 500px; */
   margin: 0 auto;
   background-color: aqua;
   display: flex;
   flex-direction: row; /* mengurutkan berdasarkan kolom dari angka besar ke kecil */
-  justify-content: center; /* Mengatur jarak antar element flex */
+  /* justify-content: center; Mengatur jarak antar element flex */
   align-items: center; /* Mengatatur ukuran / jarak element secara vertikal */
   flex-wrap: wrap; /*mengatur element div/ kotak agar tetap pada ukuran aslinya di dalam container, jika ridak cukub akan pindah kebawahnya */
+  /* align-content: space-between;  untuk membuat jarak antara konten dengan pembungkus*/
 }
 
 div {
@@ -20,9 +21,10 @@ div {
   text-align: center;
   line-height: 6em;
   font-size: 2rem;
+  flex-basis: 300px;
 }
 
-div:nth-of-type(1) {
+/* div:nth-of-type(1) {
   align-self: flex-start;
 }
 
@@ -32,4 +34,4 @@ div:nth-of-type(2) {
 
 div:nth-of-type(3) {
   align-self: stretch;
-}
+} */
