@@ -22,6 +22,11 @@ body {
   font-weight: 500;
 }
 
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: background 500ms;
+}
+
 #title-head {
   font-weight: 100;
   font-size: 4rem;
@@ -46,7 +51,8 @@ body {
 }
 
 @media (max-width: 1200px) {
-  #title-head h1 {
+  #title-head {
     font-size: 3rem;
+    font-weight: 100;
   }
 }
