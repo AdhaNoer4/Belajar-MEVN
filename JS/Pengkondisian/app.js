@@ -15,13 +15,19 @@
 const pass = prompt("masukan password");
 // cek apakah password lebih dari 6 karakter
 
-if (pass.length >= 6) {
-  // cek apakah password ada spasi
-  if (pass.indexOf(" ") === -1) {
-    console.log("password valid");
-  } else {
-    console.log("password tidak boleh ada spasi");
-  }
+// if (pass.length >= 6) {
+//   // cek apakah password ada spasi
+//   if (pass.indexOf(" ") === -1) {
+//     console.log("password valid");
+//   } else {
+//     console.log("password tidak boleh ada spasi");
+//   }
+// } else {
+//   console.log("password minimal 6 karakter");
+// }
+
+if (pass.length >= 6 && pass.indexOf(" ") === -1) {
+  console.log("Passwword Valid");
 } else {
-  console.log("password minimal 6 karakter");
+  console.log("Password tidak memenuhi syarat");
 }
