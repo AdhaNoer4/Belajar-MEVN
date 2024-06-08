@@ -32,5 +32,7 @@ function jumlah(a, b) {
   }
   return a + b;
 }
-
-const hasil = jumlah(5, 6);
+let angka1 = parseInt(prompt("masukan Angka Pertama!"));
+let angka2 = parseInt(prompt("masukan Angka Kedua!"));
+const hasil = jumlah(angka1, angka2);
+alert(`Hasilnya adalah ${hasil}`);
