@@ -23,3 +23,14 @@ const saya = {
     return `Halo Saya ${this.nama}. Hobi Saya ${this.hobi}`;
   },
 };
+
+// Try Catch
+// Berrfungsi untuk Menangkap pesan error dan kita dapat mengcustom pesan error tersebut untuk di tampilkan
+function teriak(msg) {
+  try {
+    console.log(msg.toUpperCase());
+  } catch (error) {
+    console.log(error);
+    console.log("Silahkan masukan input dengan tipe data String");
+  }
+}
