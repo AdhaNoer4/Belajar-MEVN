@@ -19,6 +19,11 @@ form.addEventListener("submit", (e) => {
   input.value = "";
 });
 
+// Event Delegation = memanipulasi node / element esuai target
+list.addEventListener("click", (e) => {
+  e.target.nodeName === "LI" && e.target.remove();
+});
+
 // document.querySelector("a").addEventListener("click", (e) => {
 //   e.preventDefault();
 //   console.log('link di klik');
