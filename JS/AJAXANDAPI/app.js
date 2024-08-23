@@ -1,14 +1,31 @@
-const req = new XMLHttpRequest();
-let data
+// const req = new XMLHttpRequest();
+// let data
 
-req.onload = function () {
-    data = JSON.parse(this.responseText);
-  console.log(this);
+// req.onload = function () {
+//     data = JSON.parse(this.responseText);
+//   console.log(this);
+// };
+
+// req.onerror = function () {
+//   console.log("Error", this);
+// };
+
+// req.open("GET", "https://swapi.dev/api/people/1");
+// req.send();
+
+// request api dengan fetch async await
+
+const loadpeople = async () => {
+  try {
+    const res = await fetch("https://swapi.dev/api/people/1");
+    const data = await res.json();
+    console.log(data);
+    const res2 = await fetch("https://swapi.dev/api/people/2");
+    const data2 = await res2.json();
+    console.log(data2);
+  } catch (error) {
+    console.log("Error", err);
+  }
 };
 
-req.onerror = function () {
-  console.log("Error", this);
-};
-
-req.open("GET", "https://swapi.dev/api/people/1");
-req.send();
+loadpeople();
