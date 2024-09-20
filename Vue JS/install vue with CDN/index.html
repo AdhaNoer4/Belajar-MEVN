@@ -9,6 +9,8 @@
   </head>
   <body>
     <div id="app">
+      <!-- binding data ke dalam atribut dengan vue  bisa dengan v-bind:atribut / langsung :atribut  -->
+      <img class="img-fluid img-thumbnail w-25" v-bind:src="image" :alt="name" />
       <h2>{{ name }}</h2>
       <p>{{ description }}</p>
       <div class="h3">{{ price }}</div>
