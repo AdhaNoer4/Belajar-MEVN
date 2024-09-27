@@ -9,6 +9,12 @@
   </head>
   <body class="">
     <div class="container" id="app">
+      <div class="row-cols-lg-auto mr-auto">
+        <label for="" class="font-weight-bold mr-2">Max</label>
+        <!-- Menangani input data dari user dengan v-model pada atribut HTML -->
+        <input type="number" class="form-control w-25" v-model="maximum" />
+      </div>
+      <input type="range" min="0" max="100" class="custom-range" v-model="maximum" />
       <!-- perulangan pada vue dengan menambahkan v-for pada atribut element HTML -->
       <div class="row d-flex mb-3 align-items-center" v-for="item in products">
         <!-- Pengkondisian if pada vue dengan menambahkan v-if pada atribut elemen HTML -->

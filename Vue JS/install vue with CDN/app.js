@@ -1,5 +1,5 @@
 var dataProduct = {
-    maximum : 10,
+    maximum :50,
     products: [
         {
             "id": "429",
