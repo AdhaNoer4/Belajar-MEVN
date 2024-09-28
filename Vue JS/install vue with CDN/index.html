@@ -9,16 +9,26 @@
   </head>
   <body class="">
     <div class="container" id="app">
+      <nav class="navbar navbar-light bg-light">
+        <div class="navbar-text ml-auto">
+          <b>cart:</b>
+          <span class="badge rounded-pill bg-success">{{ cart.length }}</span>
+        </div>
+      </nav>
       <div class="row-cols-lg-auto mr-auto">
-        <label for="" class="font-weight-bold mr-2">Max</label>
+        <label for="number" class="font-weight-bold mr-2">Max</label>
         <!-- Menangani input data dari user dengan v-model pada atribut HTML -->
-        <input type="number" class="form-control w-25" v-model="maximum" />
+        <input type="number" class="form-control w-25" v-model="maximum" id="number" />
       </div>
       <input type="range" min="0" max="100" class="custom-range" v-model="maximum" />
       <!-- perulangan pada vue dengan menambahkan v-for pada atribut element HTML -->
       <div class="row d-flex mb-3 align-items-center" v-for="item in products">
         <!-- Pengkondisian if pada vue dengan menambahkan v-if pada atribut elemen HTML -->
         <div v-if="item.price <= maximum">
+          <div class="col-1 m-auto">
+            <!-- Event di Vue.js dengan v-on: di dalam atribut element HTML -->
+            <button class="btn btn-info" v-on:click="addItem(item)">+</button>
+          </div>
           <div class="col-sm-4">
             <img :src="item.image" :alt="item.name" class="img-fluid d-block" />
           </div>
