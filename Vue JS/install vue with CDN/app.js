@@ -6,6 +6,9 @@ var app = new Vue({
     maximum: 50,
     products: null,
     cart: [],
+    style: {
+     label: ['font-weight-bold', 'ms-2', 'me-2']
+    }
   },
   // life cycle hooks vue.js
   mounted: function () {

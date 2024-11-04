@@ -15,12 +15,13 @@
           <span class="badge rounded-pill bg-success">{{ cart.length }}</span>
         </div>
       </nav>
-      <div class="row-cols-lg-auto mr-auto">
-        <label for="number" class="font-weight-bold mr-2">Max</label>
+      <h1>My Shop</h1>
+      <div class="d-flex align-items-center">
+        <label for="number" :class="style.label">Max</label>
         <!-- Menangani input data dari user dengan v-model pada atribut HTML -->
-        <input type="number" class="form-control w-25" v-model="maximum" id="number" />
+        <input type="number" class="form-control" :style="{'width' : '60px', 'text-align': 'center'}" v-model="maximum" id="number" />
+        <input type="range" min="0" max="100" class="custom-range" v-model="maximum" />
       </div>
-      <input type="range" min="0" max="100" class="custom-range" v-model="maximum" />
       <!-- perulangan pada vue dengan menambahkan v-for pada atribut element HTML -->
       <div class="row d-flex mb-3 align-items-center" v-for="item in products">
         <!-- Pengkondisian if pada vue dengan menambahkan v-if pada atribut elemen HTML -->
