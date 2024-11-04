@@ -2,13 +2,15 @@
 var app = new Vue({
   el: "#app",
   data: {
-    imgClass: 'img-fluid',
+    imgClass: "img-fluid",
     maximum: 50,
     products: null,
     cart: [],
     style: {
-     label: ['font-weight-bold', 'ms-2', 'me-2']
-    }
+      label: ["font-weight-bold", "ms-2", "me-2"],
+      inputWidth: 60,
+      sliderStatus: false,
+    },
   },
   // life cycle hooks vue.js
   mounted: function () {
@@ -18,6 +20,12 @@ var app = new Vue({
         // masukan data kedalam property product
         this.products = data;
       });
+  },
+
+  computed: {
+    sliderState: function () {
+      return this.style.sliderStatus ? "d-flex" : "d-none";
+    },
   },
 
   // Method dalam Vue.js

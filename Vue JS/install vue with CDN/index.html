@@ -16,10 +16,10 @@
         </div>
       </nav>
       <h1>My Shop</h1>
-      <div class="d-flex align-items-center">
+      <div class=" align-items-center" :class="sliderState">
         <label for="number" :class="style.label">Max</label>
         <!-- Menangani input data dari user dengan v-model pada atribut HTML -->
-        <input type="number" class="form-control" :style="{'width' : '60px', 'text-align': 'center'}" v-model="maximum" id="number" />
+        <input type="number" class="form-control mx-2" :style="{'width' : style.inputWidth + 'px', 'text-align': 'center'}" v-model="maximum" id="number" />
         <input type="range" min="0" max="100" class="custom-range" v-model="maximum" />
       </div>
       <!-- perulangan pada vue dengan menambahkan v-for pada atribut element HTML -->
