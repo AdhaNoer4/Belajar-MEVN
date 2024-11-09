@@ -30,6 +30,21 @@ var app = new Vue({
 
   // Method dalam Vue.js
   methods: {
+    beforeEnter: function (el){
+      el.className = 'd-none';
+    },
+    enter: function (el){
+      var delay = el.dataset.index * 100;
+      setTimeout(() => {
+        el.className = 'row d-flex mb-3 align-items-center animate__animated animate__fadeInRight'
+      }, delay);
+    },
+    leave: function (el){
+      var delay = el.dataset.index * 100;
+      setTimeout(() => {
+        el.className = 'row d-flex mb-3 align-items-center animate__animated animate__fadeOutRight'
+      }, delay);
+    },
     addItem: function (product) {
       this.cart.push(product);
     },
