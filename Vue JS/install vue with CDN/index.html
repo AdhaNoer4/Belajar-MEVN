@@ -31,29 +31,31 @@
             <label for="number" :class="style.label">Max</label>
             <!-- Menangani input data dari user dengan v-model pada atribut HTML -->
             <input type="number" class="form-control mx-2" :style="{'width' : style.inputWidth + 'px', 'text-align': 'center'}" v-model="maximum" id="number" />
-            <input type="range" min="0" max="100" class="custom-range" v-model="maximum" />
+            <input type="range" min="0" max="200" class="custom-range" v-model="maximum" />
           </div>
         </div>
       </transition>
 
-      <!-- perulangan pada vue dengan menambahkan v-for pada atribut element HTML -->
-      <div class="row d-flex mb-3 align-items-center" v-for="item in products">
-        <!-- Pengkondisian if pada vue dengan menambahkan v-if pada atribut elemen HTML -->
-        <div v-if="item.price <= maximum">
-          <div class="col-1 m-auto">
-            <!-- Event di Vue.js dengan v-on: di dalam atribut element HTML -->
-            <button class="btn btn-info" v-on:click="addItem(item)">+</button>
-          </div>
-          <div class="col-sm-4">
-            <img :src="item.image" :alt="item.name" class="img-fluid d-block" />
-          </div>
-          <div class="col">
-            <h3 class="text-info">{{ item.name }}</h3>
-            <p class="mb-0">{{ item.description }}</p>
-            <div class="h5 float-right">Rp{{ item.price }}</div>
+      <transition-group name="fade" tag="div" enter-active-class="animate__animated animate__fadeInRight" leave-active-class="animate__animated animate__fadeOutRight">
+        <!-- perulangan pada vue dengan menambahkan v-for pada atribut element HTML -->
+        <div class="row d-flex mb-3 align-items-center" v-for="item in products" :key="item.id">
+          <!-- Pengkondisian if pada vue dengan menambahkan v-if pada atribut elemen HTML -->
+          <div v-if="item.price <= maximum">
+            <div class="col-1 m-auto">
+              <!-- Event di Vue.js dengan v-on: di dalam atribut element HTML -->
+              <button class="btn btn-info" v-on:click="addItem(item)">+</button>
+            </div>
+            <div class="col-sm-4">
+              <img :src="item.image" :alt="item.name" class="img-fluid d-block" />
+            </div>
+            <div class="col">
+              <h3 class="text-info">{{ item.name }}</h3>
+              <p class="mb-0">{{ item.description }}</p>
+              <div class="h5 float-right">Rp{{ item.price }}</div>
+            </div>
           </div>
         </div>
-      </div>
+      </transition-group>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
