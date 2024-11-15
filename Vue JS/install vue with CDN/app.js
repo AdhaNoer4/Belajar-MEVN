@@ -22,6 +22,12 @@ var app = new Vue({
       });
   },
 
+  filters: {
+    currencyFormat : (value)=>{
+      return 'Rp' + Number.parseFloat(value).toFixed(2);
+    }
+  },
+
   computed: {
     sliderState: function () {
       return this.style.sliderStatus ? "d-flex" : "d-none";
