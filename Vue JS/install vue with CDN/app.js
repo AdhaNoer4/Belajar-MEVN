@@ -23,9 +23,9 @@ var app = new Vue({
   },
 
   filters: {
-    currencyFormat : (value)=>{
-      return 'Rp' + Number.parseFloat(value).toFixed(2);
-    }
+    currencyFormat: (value) => {
+      return "Rp" + Number.parseFloat(value).toFixed(2);
+    },
   },
 
   computed: {
@@ -36,23 +36,37 @@ var app = new Vue({
 
   // Method dalam Vue.js
   methods: {
-    beforeEnter: function (el){
-      el.className = 'd-none';
+    beforeEnter: function (el) {
+      el.className = "d-none";
     },
-    enter: function (el){
+    enter: function (el) {
       var delay = el.dataset.index * 100;
       setTimeout(() => {
-        el.className = 'row d-flex mb-3 align-items-center animate__animated animate__fadeInRight'
+        el.className = "row d-flex mb-3 align-items-center animate__animated animate__fadeInRight";
       }, delay);
     },
-    leave: function (el){
+    leave: function (el) {
       var delay = el.dataset.index * 100;
       setTimeout(() => {
-        el.className = 'row d-flex mb-3 align-items-center animate__animated animate__fadeOutRight'
+        el.className = "row d-flex mb-3 align-items-center animate__animated animate__fadeOutRight";
       }, delay);
     },
     addItem: function (product) {
-      this.cart.push(product);
+      var productIndex;
+      var productExist = this.cart.filter(function (item, index) {
+        if (item.product.id == Number(product.id)) {
+          productIndex = index;
+          return true;
+        } else {
+          return false;
+        }
+      });
+
+      if (productExist.length) {
+        this.cart[productIndex].qty++;
+      } else {
+        this.cart.push({ product: product, qty: 1 });
+      }
     },
   },
 });
