@@ -1,4 +1,16 @@
 // Reactive data pada Vuejs adalah kita dapat menghubungkan element dengan property dari objek js yang dapat kita ubah dengan mudah dan element juga akan ikut berubah secara real time
+// component merupakan template yang dapat kita gunakan berulang ulang di Vue.js
+Vue.component("price", {
+  data: function () {
+    return {
+      prefix: "Rp",
+      value: 34.05,
+      precision: 2,
+    };
+  },
+  template: `<span>{{ this.prefix + Number.parseFloat(this.value).toFixed(this.precision) }} </span>`,
+});
+
 var app = new Vue({
   el: "#app",
   data: {
