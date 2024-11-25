@@ -3,11 +3,10 @@
 Vue.component("price", {
   data: function () {
     return {
-      prefix: "Rp",
-      value: 34.05,
-      precision: 2,
+    
     };
   },
+  props: ['value','prefix','precision'],
   template: `<span>{{ this.prefix + Number.parseFloat(this.value).toFixed(this.precision) }} </span>`,
 });
 
