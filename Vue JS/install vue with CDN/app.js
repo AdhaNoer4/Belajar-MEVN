@@ -18,6 +18,49 @@ Vue.component("price", {
   template: `<span>{{ this.prefix + Number.parseFloat(this.value).toFixed(this.precision) }} </span>`,
 });
 
+Vue.component("product-list", {
+  props: ['products', 'maximum'],
+  methods: {
+    beforeEnter: function (el) {
+      el.className = "d-none";
+    },
+    enter: function (el) {
+      var delay = el.dataset.index * 100;
+      setTimeout(() => {
+        el.className = "row d-flex mb-3 align-items-center animate__animated animate__fadeInRight";
+      }, delay);
+    },
+    leave: function (el) {
+      var delay = el.dataset.index * 100;
+      setTimeout(() => {
+        el.className = "row d-flex mb-3 align-items-center animate__animated animate__fadeOutRight";
+      }, delay);
+    },
+  } ,
+  template: `
+  <transition-group name="fade" tag="div" @beforeEnter="beforeEnter" @enter="enter" @leave="leave">
+        <!-- perulangan pada vue dengan menambahkan v-for pada atribut element HTML -->
+        <div class="row d-none mb-3 align-items-center" v-for="(item, index) in products" :key="item.id" v-if="item.price <= Number(maximum)" :data-index="index">
+          <!-- Pengkondisian if pada vue dengan menambahkan v-if pada atribut elemen HTML -->
+
+          <div class="col-1 m-auto">
+            <!-- Event di Vue.js dengan v-on: di dalam atribut element HTML -->
+            <button class="btn btn-info" @click="$emit('add', item)">+</button>
+          </div>
+          <div class="col-sm-4">
+            <img :src="item.image" :alt="item.name" class="img-fluid d-block" />
+          </div>
+          <div class="col">
+            <h3 class="text-info">{{ item.name }}</h3>
+            <p class="mb-0">{{ item.description }}</p>
+            <div class="h5 float-right">
+              <price :value="Number(item.price)" :prefix="'Rp'" :precision="3"> </price>
+            </div>
+          </div>
+        </div>
+      </transition-group>`
+})
+
 var app = new Vue({
   el: "#app",
   data: {
@@ -69,21 +112,7 @@ var app = new Vue({
 
   // Method dalam Vue.js
   methods: {
-    beforeEnter: function (el) {
-      el.className = "d-none";
-    },
-    enter: function (el) {
-      var delay = el.dataset.index * 100;
-      setTimeout(() => {
-        el.className = "row d-flex mb-3 align-items-center animate__animated animate__fadeInRight";
-      }, delay);
-    },
-    leave: function (el) {
-      var delay = el.dataset.index * 100;
-      setTimeout(() => {
-        el.className = "row d-flex mb-3 align-items-center animate__animated animate__fadeOutRight";
-      }, delay);
-    },
+    
     addItem: function (product) {
       var productIndex;
       var productExist = this.cart.filter(function (item, index) {
